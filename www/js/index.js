@@ -16,7 +16,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-		document.addEventListener("pause", onResume, false);
+		document.addEventListener("resume", onResume, false);
         app.receivedEvent('deviceready');
 
 		
@@ -40,12 +40,15 @@ var app = {
 		
 		
 		//IPAD CHANGE
-		if(screen.width < 800){
-			alert(screen.width);
+		if(screen.width < 768){
+			if(screen.height > 568){
+				$("#copertina").attr("height", "60%");
+			}
+			//alert(screen.width);
 		}
 		else
 		{
-			alert(screen.width);
+			//alert(screen.width);
 			
 			$("#testoTitolo").attr("class", "visione2IPAD");
 			$("#testo").attr("class", "visioneIPAD");
