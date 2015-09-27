@@ -40,12 +40,12 @@ var app = {
 		
 		
 		//IPAD CHANGE
-		if(screen.height < 800){
-			alert(screen.height);
+		if(screen.width < 800){
+			alert(screen.width);
 		}
 		else
 		{
-			alert(screen.height);
+			alert(screen.width);
 			
 			$("#testoTitolo").attr("class", "visione2IPAD");
 			$("#testo").attr("class", "visioneIPAD");
