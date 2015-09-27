@@ -86,7 +86,7 @@ var app = {
 		
 		var ciccio;
 		
-		$(document).on("touchstart", "#primo", function(e){
+		$(document).on("touchend", "#primo", function(e){
 			$.mobile.changePage( "#page2", { transition: "slide", changeHash: false });
 			carica()
 		});
@@ -117,6 +117,7 @@ var app = {
 		});
 		
 		$(document).on("touchend", "#primos", function(e){
+			$("#galleriaimg").html("<tr><td width='100%' colspan='2'>&nbsp;</td></tr>");
 			$.mobile.changePage( "#page", { transition: "slide", changeHash: false, reverse: true });
 			 myScroll.scrollTo(0,0);
 		});
@@ -287,12 +288,12 @@ function initscroll() {
 
 function carica() {
 	
-$(".spinner").show();
-	
 	$("#galleriaimg").html("<tr><td width='100%' colspan='2'>&nbsp;</td></tr>");
 	
 	setTimeout (function(){
 				$("#galleriaimg").append("<tr><td width='100%' align='center' ><img src='img/fig1.jpg' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig2.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig3.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr>");
+				
+		$(".spinner").show();
 		
 		setTimeout (function(){
 				$("#galleriaimg").append("<tr><td width='100%' align='center' ><img src='img/fig4.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig5.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig6.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig7.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig8.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig9.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig10.jpg' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr>");
