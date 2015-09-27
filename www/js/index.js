@@ -43,6 +43,11 @@ var app = {
 		if(screen.width < 768){
 			if(screen.height > 568){
 				$("#copertina").attr("height", "60%");
+				$("#testoTitolo").attr("class", "visione2DROID");
+				//$("#testo").attr("class", "visioneIPAD");
+				$("#testoCentrale").attr("class", "visione3DROID");
+				$("#Nome").attr("class", "visione3DROID");
+				$("#titolo").attr("class", "visione4DROID");
 			}
 			//alert(screen.width);
 		}
