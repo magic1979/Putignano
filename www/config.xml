@@ -5,8 +5,8 @@
 		versionCode="1.0"
 		version   = "1.0">
 		<name>Putignano</name>
-		<description>MisterTod, e sei un cliente di serie A</description>
-		<author href="http://www.mistertod.it" email="info@mistertod.it">
+		<description>Domenico Putignano, Ermes Italia</description>
+		<author href="http://www.ermesitalia.it" email="info@ermesitalia.it">
 PokerParade sas
 		</author>
 		<preference name="phonegap-version" value="3.7.0" />
@@ -33,11 +33,11 @@ PokerParade sas
 		<preference name="android-targetSdkVersion" value="11" />
 		<preference name="android-installLocation" value="auto" />
 		<preference name="SplashScreenDelay" value="10000" />
-		<preference name="ErrorUrl" value="http://www.mistertod.it"/>
+		<preference name="ErrorUrl" value="http://www.ermesitalia.it"/>
 		<preference name="BackgroundColor" value="#707070"/>
 		<preference name="KeepRunning" value="true"/>
 		<preference name="DisallowOverscroll" value="true"/>
-		<preference name="LoadingDialog" value="MisterTod,Loading"/> 
+		<preference name="LoadingDialog" value="ErmesItalia,Loading"/> 
 		<preference name="LoadUrlTimeoutValue" value="20000" />
 		<preference name="disable-cursor" value="true" />
 		<gap:platform name="android" />

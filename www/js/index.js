@@ -16,7 +16,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-		document.addEventListener("resume", onResume, false);
+		document.addEventListener("pause", onResume, false);
         app.receivedEvent('deviceready');
 
 		
@@ -37,7 +37,25 @@ var app = {
 		//var isPhone = screen.height < 800 || screen.width < 800;
 		
 		//alert(screen.height);
-
+		
+		
+		//IPAD CHANGE
+		if(screen.height < 800){
+			alert(screen.height);
+		}
+		else
+		{
+			alert(screen.height);
+			
+			$("#testoTitolo").attr("class", "visione2IPAD");
+			$("#testo").attr("class", "visioneIPAD");
+			$("#testoCentrale").attr("class", "visione3IPAD");
+			$("#Nome").attr("class", "visione3IPAD");
+			$("#titolo").attr("class", "visione4IPAD");
+			$("#copertina").attr("height", "100%");
+		}
+		
+		
 		
 		last_click_time = new Date().getTime();
 		
@@ -81,7 +99,8 @@ var app = {
 		});
 		
 		$(document).on("touchend", "#sesto", function(e){
-		   myScroll.scrollTo(0,-440);
+			$.mobile.changePage( "#page8", { transition: "slide", changeHash: false });
+			carica8();
 		});
 		
 		$(document).on("touchend", "#vedi", function(e){
@@ -115,6 +134,11 @@ var app = {
 			myScroll.scrollTo(0,0);
 		});
 		
+		$(document).on("touchend", "#ottavos", function(e){
+			$.mobile.changePage( "#page", { transition: "slide", changeHash: false, reverse: true });
+			myScroll.scrollTo(0,0);
+		});
+		
 		$(document).on("touchend", "#pulsms", function(e){
 			aprisms()
 		});
@@ -123,9 +147,9 @@ var app = {
 			carica3()
 		});
 		
-		//$("#video").html("<iframe width='220' height='130' src='http://www.youtube.com/embed/cf5PVgbrlCM?feature=player_embedded' frameborder='0' allowfullscreen></iframe>");
+		$("#video").html("<iframe width='220' height='130' src='http://www.youtube.com/embed/cf5PVgbrlCM?feature=player_embedded' frameborder='0' allowfullscreen></iframe>");
 		
-		//$("#video2").html("<iframe width='220' height='130' src='http://www.youtube.com/embed/Hl10lNEVBrU?feature=player_embedded' frameborder='0' allowfullscreen></iframe>");
+		$("#video2").html("<iframe width='220' height='130' src='http://www.youtube.com/embed/Hl10lNEVBrU?feature=player_embedded' frameborder='0' allowfullscreen></iframe>");
 		
 		/*last_click_time = new Date().getTime();
 		
@@ -268,7 +292,7 @@ function carica() {
 		}, 1000);
 
 	
-	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	
 	document.addEventListener('DOMContentLoaded', loaded, false);
 }
@@ -310,11 +334,28 @@ function carica4() {
 	document.addEventListener('DOMContentLoaded', loaded, false);
 }
 
+function carica8() {
+	
+	var myScroll8;
+	
+	myScroll8 = new iScroll('wrapper8', { click: true });
+	setTimeout (function(){
+		myScroll8.refresh();
+	}, 1000);
+	
+	
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	
+	document.addEventListener('DOMContentLoaded', loaded, false);
+}
+
 function carica5(id) {
 	//alert(id)
 	provino2(id)
 
 }
+
+
 
 function provino() {
 	var ciccio;
@@ -339,12 +380,12 @@ function provino() {
 				  //OK
 				  
 				  if(item.is_read==false){
-					contenuto = contenuto + "<tr title='"+ item.event_id +"'><td width='220' align='center'><table width='100%' align='left' valign='center'><tr><td width='100%' align='left' colspan='2' valign='center'><font size='3' color='#042e72'>"+ item.activated_at +" - "+ item.expire_on +" </font></td></tr><tr><td width='100%' colspan='2' valign='center'><font size='3'>"+ item.title +"</font> </td></tr></table></td><td width='120' align='center' valign='center'><img src='img/notRead.png' width='42px'></td></tr><tr><td colspan='2'><hr></td></tr>"
+					contenuto = contenuto + "<tr title='"+ item.event_id +"'><td width='90%' align='center'><table width='100%' align='left' valign='center'><tr><td width='100%' align='left' colspan='2' valign='center'><font size='3' color='#042e72'>"+ item.activated_at +" - "+ item.expire_on +" </font></td></tr><tr><td width='100%' colspan='2' valign='center'><font size='3'>"+ item.title +"</font> </td></tr></table></td><td width='120' align='center' valign='center'><img src='img/notRead.png' width='42px'></td></tr><tr><td colspan='2'><hr></td></tr>"
 				  
 					//ciccio = item.image_tag;
 				  }
 				  else{
-					contenuto = contenuto + "<tr title='"+ item.event_id +"'><td width='220' align='center'><table width='100%' align='left' valign='center'><tr><td width='100%' align='left' colspan='2' valign='center'><font size='3' color='#042e72'>"+ item.activated_at +" - "+ item.expire_on +" </font></td></tr><tr><td width='100%' colspan='2' valign='center'><font size='3'>"+ item.title +"</font> </td></tr></table></td><td width='120' align='center' valign='center'><img src='img/read.png' width='42px'></td></tr><tr><td colspan='2'><hr></td></tr>"
+					contenuto = contenuto + "<tr title='"+ item.event_id +"'><td width='90%' align='center'><table width='100%' align='left' valign='center'><tr><td width='100%' align='left' colspan='2' valign='center'><font size='3' color='#042e72'>"+ item.activated_at +" - "+ item.expire_on +" </font></td></tr><tr><td width='100%' colspan='2' valign='center'><font size='3'>"+ item.title +"</font> </td></tr></table></td><td width='120' align='center' valign='center'><img src='img/read.png' width='42px'></td></tr><tr><td colspan='2'><hr></td></tr>"
 				  
 					//ciccio = ciccio + item.image_tag;
 				  }
@@ -565,14 +606,12 @@ function regToken(token) {
 
 function apri(){
 
-	$("#pluto").show();
-	$("#pippo").slideToggle( "slow" );
+	$("#pippo").show( "slow" );
 }
 
 function aprisms(){
 	
-	$("#pluto5").show();
-	$("#pippo5").slideToggle("slow");
+	$("#pippo5").show("slow");
 }
 
 function chiudi(){
