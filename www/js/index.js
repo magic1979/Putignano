@@ -86,7 +86,7 @@ var app = {
 		
 		var ciccio;
 		
-		$(document).on("touchend", "#primo", function(e){
+		$(document).on("touchstart", "#primo", function(e){
 			$.mobile.changePage( "#page2", { transition: "slide", changeHash: false });
 			carica()
 		});
@@ -287,22 +287,40 @@ function initscroll() {
 
 function carica() {
 	
-	var myScroll2;
-
-		myScroll2 = new iScroll('wrapper2', {
-								zoom: true,
-								click: true,
-								zoomMin:1,
-								zoomMax:2
-		});
+$(".spinner").show();
+	
+	$("#galleriaimg").html("<tr><td width='100%' colspan='2'>&nbsp;</td></tr>");
+	
+	setTimeout (function(){
+				$("#galleriaimg").append("<tr><td width='100%' align='center' ><img src='img/fig1.jpg' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig2.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig3.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr>");
+		
 		setTimeout (function(){
-			myScroll2.refresh();
+				$("#galleriaimg").append("<tr><td width='100%' align='center' ><img src='img/fig4.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig5.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig6.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig7.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig8.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig9.png' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' align='center' ><img src='img/fig10.jpg' width='90%'></td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr><tr><td width='100%' colspan='2'>&nbsp;</td></tr>");
+					
+					var myScroll2;
+					
+					myScroll2 = new iScroll('wrapper2', {
+											zoom: true,
+											click: true,
+											zoomMin:1,
+											zoomMax:2
+											});
+					setTimeout (function(){
+								myScroll2.refresh();
+								
+								$(".spinner").hide();
+					}, 1000);
+					
+					
+					document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+					
+					document.addEventListener('DOMContentLoaded', loaded, false);
+					
+					
 		}, 1000);
+				
+	}, 1000);
 
-	
-	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-	
-	document.addEventListener('DOMContentLoaded', loaded, false);
 }
 
 function carica2() {
