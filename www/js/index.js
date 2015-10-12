@@ -605,6 +605,11 @@ function provino2(id) {
 		   
 		   document.addEventListener('DOMContentLoaded', loaded, false);
 		   
+		   document.getElementById("my-link").onclick = function(e) {
+			  var ref = window.open(this.href, '_system', 'location=no');
+		     // Return false to prevent the default action if you did redirect with script
+		     return false;
+		   }
 
 		   
 		   },
