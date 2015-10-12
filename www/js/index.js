@@ -43,7 +43,7 @@ var app = {
 				//alert("Phone:" + isMobileScreenWidth);
 
 				$("#copertina").attr("height", "60%");
-				$("#testoTitolo").attr("class", "visione2DROID");
+				$("#testoTitolo").attr("class", "visione2aDROID");
 				$("#testo").attr("class", "visioneDROID");
 				$("#testoCentrale").attr("class", "visione3DROID");
 				$("#Nome").attr("class", "visione3aDROID");
