@@ -852,9 +852,9 @@ function mandasms () {
 
 function aprimappa () {
 	
-	var addressLongLat = '41.929622, 12.608878';
+	var addressLongLat = '41.929622,12.608878';
 	
-	var refff = window.open("https://www.google.com/maps?q="+addressLongLat, '_system');
+	var refff = window.open("http://www.google.com/maps?q=220, Via Zoe Fontana, Roma", '_system');
 	
 	refff.addEventListener('exit', function (event) {
 		
