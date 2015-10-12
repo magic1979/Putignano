@@ -1,30 +1,10 @@
 <!DOCTYPE html>
-<!--
- Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
- 
- Licensed to the Apache Software Foundation (ASF) under one
- or more contributor license agreements.  See the NOTICE file
- distributed with this work for additional information
- regarding copyright ownership.  The ASF licenses this file
- to you under the Apache License, Version 2.0 (the
- "License"); you may not use this file except in compliance
- with the License.  You may obtain a copy of the License at
- 
- http://www.apache.org/licenses/LICENSE-2.0
- 
- Unless required by applicable law or agreed to in writing,
- software distributed under the License is distributed on an
- "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- KIND, either express or implied.  See the License for the
- specific language governing permissions and limitations@
- under the License.
- -->
 <html>
 	<head>
 		<meta property="og:locale" content="en_US" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 			
-			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=3.0">
 				
 				<link rel="stylesheet" type="text/css" href="css/index.css" />
 				<link rel="stylesheet" href="font.css">
@@ -42,9 +22,7 @@
 						<script src="js/jquery-ui.min.js"></script>
 						<script src="js/jquery.mobile-1.4.5.min.js"></script>
 						
-						<!--<script type="application/javascript" src="http://cubiq.org/dropbox/iscroll4/src/iscroll.js"></script>-->
 						<script type="text/javascript" src="js/iscroll4.js"></script>
-						<script type="text/javascript" src="js/iscroll-zoom.js"></script>
 						
 						<script type="text/javascript">
 							
@@ -53,12 +31,12 @@
 								myScroll = new iScroll('wrapper', {
 									zoom: true,
 									click: true,
+									hScrollbar: false, 
+									vScrollbar: false,
 									zoomMin:1,
-									zoomMax:2
+									zoomMax:2,
+									zoomStart:1
 								});
-								setTimeout (function(){
-									myScroll.refresh();
-								}, 700);
 							}
 						
 						document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -123,7 +101,7 @@
 						#wrapper {
 							position: absolute;
 							z-index: 1;
-							top: 16%;
+							top: 12%;
 							bottom: 0px;
 							left: 0;
 							width: 100%;
@@ -161,7 +139,7 @@
 						#wrapper3 {
 							position: absolute;
 							z-index: 1;
-							top: 16%;
+							top: 12%;
 							bottom: 0px;
 							left: 0;
 							width: 100%;
@@ -179,7 +157,7 @@
 						#wrapper4 {
 							position: absolute;
 							z-index: 1;
-							top: 16%;
+							top: 12%;
 							bottom: 0px;
 							left: 0;
 							width: 100%;
@@ -196,7 +174,7 @@
 						#wrapper5 {
 							position: absolute;
 							z-index: 1;
-							top: 16%;
+							top: 12%;
 							bottom: 0px;
 							left: 0;
 							width: 100%;
@@ -213,7 +191,7 @@
 						#wrapper6 {
 							position: absolute;
 							z-index: 1;
-							top: 16%;
+							top: 12%;
 							bottom: 0px;
 							left: 0;
 							width: 100%;
@@ -231,7 +209,7 @@
 						#wrapper7 {
 							position: absolute;
 							z-index: 1;
-							top: 16%;
+							top: 12%;
 							bottom: 0px;
 							left: 0;
 							width: 100%;
@@ -249,7 +227,7 @@
 						#wrapper8 {
 							position: absolute;
 							z-index: 1;
-							top: 16%;
+							top: 12%;
 							bottom: 0px;
 							left: 0;
 							width: 100%;
@@ -336,6 +314,7 @@
 						
 						.ui-mobile, .ui-mobile .ui-page, .ui-mobile [data-role="page"],
 						.ui-mobile [data-role="dialog"], .ui-page, .ui-mobile .ui-page-active {
+							height: 100%;
 							overflow: hidden;
 							-webkit-backface-visibility: hidden;
 						}
@@ -376,7 +355,7 @@
 							top:0px;
 							left:0px;
 							width:100%;
-							height: 12%;
+							height: 8%;
 							padding: 0;
 							color: #000;
 							
@@ -407,7 +386,7 @@
 							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 						}
 						.div5 {
-							background-color: #000;
+							background-color: #000000;
 							position: fixed;
 							z-index: 19;
 							bottom: 0;
@@ -420,8 +399,8 @@
 							text-align: center;
 							font-weight: bold;
 							
-							opacity: 0.6;
-							filter: alpha(opacity=60);
+							opacity: 0.5;
+							filter: alpha(opacity=50);
 							
 						}
 						
@@ -433,7 +412,7 @@
 							width: 100%;
 							height: 5%;
 							padding: 0;
-							color: #000;
+							color: #2E2E2E;
 							
 							text-align: center;
 							font-weight: bold;
@@ -452,6 +431,10 @@
 							opacity: 0.9;
 							filter: alpha(opacity=90);
 							
+						}
+						
+						.galleriaimmagini {
+							position: absolute;
 						}
 						
 						.div6 {
@@ -792,7 +775,7 @@
 						#pluto {
 							/* Cosmettics only */
 							position:absolute;
-							background: #000000;
+							background: #2E2E2E;
 							width: 100%;
 							height:100%;
 							
@@ -812,7 +795,7 @@
 						#pippo {
 							/* Cosmettics only  */
 							
-							background: #000000;
+							background: #2E2E2E;
 							border-radius: 10px;
 							
 							position: absolute;
@@ -821,7 +804,7 @@
 							margin-top: -150px;
 							margin-left: -150px;
 							width: 300px;
-							height: 260px;
+							height: 270px;
 							
 							z-index: 101;
 							
@@ -830,7 +813,7 @@
 						#pluto5 {
 							/* Cosmettics only */
 							position:absolute;
-							background: #000000;
+							background: #2E2E2E;
 							width: 100%;
 							height:100%;
 							
@@ -850,7 +833,7 @@
 						#pippo5 {
 							/* Cosmettics only  */
 							
-							background: #000000;
+							background: #2E2E2E;
 							border-radius: 10px;
 							
 							position: absolute;
@@ -974,7 +957,7 @@
 						}
 						
 						.pulsante3:active {
-							background-image: url(img/button5a.png);
+							background-image: url(img/button5.png);
 							
 							border-radius:999em;
 							-moz-border-radius:999em;
@@ -1194,6 +1177,41 @@
 							box-shadow: 0px 0px 0.5px 0px #000;
 						}
 						
+						.pulsanteback2 {
+							background-image: url(img/back.png);
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position:center;
+							width: 100%;
+							height: 0;
+							padding-top: 66.64%; /* (img-height / img-width * width) */
+							/* (853 / 1280 * 100) */
+							
+							z-index: 21;
+							border-radius:999em;
+							-moz-border-radius:999em;
+							-webkit-border-radius:999em;
+							-o-border-radius: 999em;
+							
+							/*-webkit-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 -moz-box-shadow: 0px 0px 0.5px 1.5px #000;
+							 box-shadow: 0px 0px 0.5px 1.5px #000;*/
+						}
+						
+						.pulsanteback2:active {
+							background-image: url(img/back.png);
+							
+							border-radius:5px;
+							-moz-border-radius:5px;
+							-webkit-border-radius:5px;
+							-o-border-radius: 5px;
+							
+							z-index: 21;
+							-webkit-box-shadow: 0px 0px 0.5px 0px #000;
+							-moz-box-shadow: 0px 0px 0.5px 0px #000;
+							box-shadow: 0px 0px 0.5px 0px #000;
+						}
+						
 						.foto {
 							background-image: url(img/Immagine.png);
 							background-size: contain;
@@ -1224,7 +1242,7 @@
 							div { -webkit-transform:translate3d(0,0,0) }
 							
 							.visione {
-								font-size:12px;
+								font-size:14px;
 								text-decoration: none;
 								text-shadow:0 0 0;
 								color: #000;
@@ -1237,8 +1255,15 @@
 							color: #000;
 						}
 						
-						.visioneDROID {
-							font-size:14px;
+						.visioneIPAD0 {
+							font-size:16px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #000;
+						}
+          
+                        .visioneDROID0 {
+							font-size:12px;
 							text-decoration: none;
 							text-shadow:0 0 0;
 							color: #000;
@@ -1250,6 +1275,13 @@
 							text-shadow:0 0 0;
 							color: #042e72;
 						}
+          
+                       .visioneDROID {
+							font-size:14px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #000;
+						}
 						
 						.visione2IPAD {
 							font-size:24px;
@@ -1258,8 +1290,15 @@
 							color: #042e72;
 						}
 						
-						.visione2DROID {
-							font-size:14px;
+						.visione2aIPAD {
+							font-size:26px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #042e72;
+						}
+          
+          			    .visione2DROID {
+							font-size:16px;
 							text-decoration: none;
 							text-shadow:0 0 0;
 							color: #042e72;
@@ -1272,37 +1311,56 @@
 							color: #042e72;
 						}
 						.visione3IPAD {
-							font-size:30px;
+							font-size:40px;
 							text-decoration: none;
 							text-shadow:0 0 0;
 							color: #042e72;
 						}
-						.visione3DROID {
+						
+						.visione3aIPAD {
+							font-size:28px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #042e72;
+						}
+          
+                        .visione3DROID {
+							font-size:16px;
+							text-decoration: none;
+							text-shadow:0 0 0;
+							color: #042e72;
+						}
+						
+						.visione3aDROID {
 							font-size:18px;
 							text-decoration: none;
 							text-shadow:0 0 0;
 							color: #042e72;
 						}
+          
 						.visione4 {
 							font-size:15px;
 							text-decoration: none;
 							text-shadow:0 0 0;
-							color: red;
+							color: #DC143C;
 						}
 						.visione4IPAD {
 							font-size:30px;
 							text-decoration: none;
 							text-shadow:0 0 0;
-							color: red;
+							color: #DC143C;
 						}
-						.visione4DROID {
-							font-size:18px;
+          
+                        .visione4DROID {
+							font-size:14px;
 							text-decoration: none;
 							text-shadow:0 0 0;
-							color: red;
+							color: #DC143C;
 						}
 
 						</style>
+	
+						
 	</head>
 	<body>
 		
@@ -1321,19 +1379,26 @@
 		
 		<div id="wrapper">
 			<div id="scroller">
+				<table id="spazioipad" style="display: none;" height="80px"><tr><td></td></tr></table>
+				<table id="spaziodroid" style="display: none;" height="30px"><tr><td></td></tr></table>
 				
 				<table width="98%" border="0" valign="center" align="center" >
 					<tr>
-						<td width="95%">
+						<td width="95%" align="center">
 							<div id="testoTitolo" class="visione2"><b>Soluzioni e Tecnologie per il vostro business</b></div>
 						</td>
 						<td width="5%">
-								<a href="javascript:apri()"><img src="img/info.png" width="26"></a>
+								<a href="javascript:apri()"><img id="pallina" src="img/info.png" width="26"></a>
 						</td>
 					</tr>
 					<tr>
 						<td width="100%" align="justify" colspan="2">
-							<div id="testo" class="visione">Ermes Italia produce tecnologie innovative e progetta soluzioni d’avanguardia in ambito ICT e Business Intelligence.<br> Struttura aziendale orientata al Cliente pronta a raccogliere le nuove sfide del mercato.<br>Ermes Italia garantisce competenza e creatività nel rispetto della concretezza e fattibilità delle soluzioni tecnologiche. Professionalità, Versatilità e Capacità di Team  Working consentono ad Ermes Italia di competere nelle aree di:&nbsp;<a id="vedi" href="#" ><font color="#042e72">continua&nbsp;[...]</a><br><br></div>
+							<div id="testo" class="visione">Ermes Italia produce tecnologie innovative e progetta soluzioni d’avanguardia in ambito ICT e Business Intelligence.<br> Struttura aziendale orientata al Cliente pronta a raccogliere le nuove sfide del mercato.<br>Ermes Italia garantisce competenza e creatività nel rispetto della concretezza e fattibilità delle soluzioni tecnologiche. Professionalità, Versatilità e Capacità di Team  Working consentono ad Ermes Italia di competere nelle aree di:&nbsp;<a id="vedi" href="#" ><font color="#042e72">continua&nbsp;[...]</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="2" align="center">
+							
 						</td>
 					</tr>
 
@@ -1342,12 +1407,22 @@
 							<div id="testoCentrale" class="visione3"><b>Computing, Consulting &amp; Mobile</b></div>
 						</td>
 					</tr>
+					<tr>
+						<td width="100%" colspan="2" align="center">
+							
+						</td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="2" align="center">
+							
+						</td>
+					</tr>
 
 					</table>
-				<table id="phone" align="center" border="0" width="90%" height="90%">
+				<table id="phone" align="center" border="0" width="97%" height="90%">
 					<tr>
-						<td align="center" width="40%" valign="top">
-							<img id="copertina" src="img/Immagine.png" height="50%" width="95%"></div>
+						<td align="right" width="40%" valign="top">
+							<img id="copertina" src="img/Immagine.png" height="56%"></div>
 						</td>
 						<td align="center" width="60%" valign="center">
 				<table align="center">
@@ -1377,172 +1452,16 @@
 			
 			</table>
 			
-					<!--<table width="100%" height="10%" border="0" valign="center" align="center" >
-						<tr>
-							<td width="100%" align="center">
-					 
-							</td>
-						</tr>
-					</table>
-					
-					<table id="ciccio" width="98%" height="100%" border="0" valign="center" align="center" class="div56">
-					<tr>
-						<td width="100%" colspan="2" align="center">&nbsp;
-							<font color="#FFF" size="3"><b>My Social Network</b></font>
-						</td>
-					</tr>
-					<tr>
-						<td width="100%" colspan="2">&nbsp;
-							
-						</td>
-					</tr>
-
-					<tr>
-						<td width="100%" colspan="2" align="center">
-							<a href="javascript:aprifb()"><img src="img/social1.png" height="74"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:apritw()"><img src="img/social4.png" height="74"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:aprili()"><img src="img/social3.png" height="74"></a>
-						</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2">&nbsp;
-							
-						</td>
-						
-					</tr>
-					</table>
-					<br><br>
-					
-					<table id="contatto" width="98%" height="100%" border="0" valign="center" align="center" class="div56">
-
-					<tr>
-						<td width="100%" colspan="2" align="center" >&nbsp;
-							<font color="#FFF" size="3"><b>My Contact</b></font>
-						</td>
-					</tr>
-
-					</table>
-					<br>
-					<table id="contatto" width="98%" height="100%" border="0" valign="center" align="center">
-					<tr>
-						<td width="100%" colspan="2" align="left">
-							<img src="img/Dindirizzo.png" height="32"><font color="#7e7e7e" size="2"><b>Address</b></font>
-								</td>
-					</tr>
-					<tr>
-						<td width="100%" colspan="2" align="left">
-							<a href="javascript:aprimappa()" class="visione"><font color="#042e72" size="3"><b>Via Zoe Fontana, 220 Roma</b></font></a>
-						</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2" align="left">
-							<a href="javascript:aprimappa()" class="visione"><img src="img/Piantina.png" width="300px"></a>
-						</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2">&nbsp;
-							
-						</td>
-					</tr>
-					<tr>
-						<td width="100%" colspan="2" align="left">
-							<img src="img/Dtel.png" height="32"><font color="#7e7e7e" size="2"><b>Phone</b></font>
-						</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2" align="left">
-							<a href="tel:+39064153215" class="visione"><font color="#042e72" size="3">+39 06 4153215</font></a>
-							
-						</td>
-					</tr>
-					<tr>
-						<td width="100%" colspan="2">&nbsp;
-							
-						</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2" align="left">
-							<img src="img/Dcell.png" height="32"><font color="#7e7e7e" size="2"><b>Mobile</b></font>
-						</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2" align="left">
-							<a href="tel:+393357540725" class="visione"><font color="#042e72" size="3">+39 335 7540725</font></a>
-						</td>
-					</tr>
-					<tr>
-						<td width="100%" colspan="2">&nbsp;
-							
-						</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2" align="left">
-							<img src="img/Demail.png" height="32"><font color="#7e7e7e" size="2"><b>e-mail</b></font>
-								</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2" align="left">
-							<a href="javascript:aprimail()"><font color="#042e72" size="3">d.putignano@ermesitalia.it</font></a>
-						</td>
-					</tr>
-					<tr>
-						<td width="100%" colspan="2">&nbsp;
-							
-						</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2" align="left">
-							<img src="img/Dinternet1.png" height="32"><font color="#7e7e7e" size="2"><b>Web</b></font>
-								</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2" align="left">
-							<font color="#042e72" size="3"><b>www.ermesitalia.it</b></font>
-						</td>
-					</tr>
-					<tr>
-						<td width="100%" colspan="2">&nbsp;
-							
-						</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2">&nbsp;
-							
-						</td>
-						
-					</tr>
-					
-					
-					<tr>
-						<td width="100%" colspan="2">&nbsp;
-							
-						</td>
-						
-					</tr>
-					<tr>
-						<td width="100%" colspan="2">&nbsp;
-							
-						</td>
-						
-					</tr>
-				</table>-->
-
-
 			</div>
 			
 		</div>
 		
+		<div id="pluto" align="center" valign="top" style="display: none;" >
+			
+		</div>
+		
 		<div id="pippo" style="display: none;">
-			<table border="0" align="center" width="100%" height="260px" class="visione">
+			<table border="0" align="center" width="100%" height="270px" class="visione">
 				<tr height="32px">
 					<td width="100%" align="right">
 						<a href="javascript:chiudi()"><img src="img/exit.png" width="32px"></a>
@@ -1574,7 +1493,7 @@
 				</tr>
 				<tr>
 					<td width="100%" align="center" valign="center">
-						<a href="javascript:aprimail()"><font color="#fff" size="4"><b>info@ermesitalia.it</b></font></a>
+						<a href="javascript:aprimail0()"><font color="#fff" size="4"><b>info@ermesitalia.it</b></font></a>
 					</td>
 					<tr>
 						<td width="100%" align="center" valign="center">
@@ -1585,24 +1504,23 @@
 			</table>
 		</div>
 		
-		
 
-		<table width="100%" border="0" align="center" valign="center" class="div5" >
+		<table id="zoccolo" width="100%" border="0" align="center" valign="center" class="div5" >
 			<tr>
 				<td algn="center" width="20%" align="center">
 					<div class="pulsante11"></div>
 				</td>
 				<td algn="center" width="20%" align="center">
-					
+					<div class="pulsante11"></div>
 				</td>
 				<td algn="center" width="20%" align="center">
-					
+					<div class="pulsante11"></div>
 				</td>
 				<td algn="center" width="20%" align="center">
-					
+					<div class="pulsante11"></div>
 				</td>
 				<td algn="center" width="20%" align="center">
-					
+					<div class="pulsante11"></div>
 				</td>
 			</tr>
 		</table>
@@ -1614,7 +1532,6 @@
 				</td>
 				<td algn="center" width="20%" align="center">
 					<a id="secondo" href="#"><div class="pulsante2"></div></a>
-					<!--<a href="#page3" onclick="carica2()" data-transition="slide"><img src="img/video.png" width="60">-->
 				</td>
 				<td algn="center" width="20%" align="center">
 					<a id="terzo" href="#"><div id="pushbutton" width='100%' class="pulsante3"></div></a>
@@ -1630,16 +1547,17 @@
 		
 		</div>
 		
-		<!--<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" >Close</a>-->
-		
 		<div id="page2" data-role="page" class="div2" >
-        
-        	<div class="spinner" id="spinner"></div>
+			
+			<div class="spinner" id="spinner"></div>
 
 			<div id="wrapper2">
 				<div id="scroller">
-					
-					<table width="98%" border="0" valign="center" align="center" >
+				<table id="spazioipad2" style="display: none;" height="80px"><tr><td></td></tr></table>
+				<table id="spaziodroid2" style="display: none;" height="30px"><tr><td></td></tr></table>
+				
+					<table id="galleriaimmagini" width="98%" border="0" valign="center" align="center" >
+						
 						<div id="galleriaimg">
 							
 						</div>
@@ -1708,6 +1626,8 @@
 			
 			<div id="wrapper3">
 				<div id="scroller">
+				<table id="spazioipad3" style="display: none;" height="80px"><tr><td></td></tr></table>
+				<table id="spaziodroid3" style="display: none;" height="30px"><tr><td></td></tr></table>
 					
 					<table width="100%" height="24px" border="0" valign="center" align="center" >
 						<tr>
@@ -1721,11 +1641,12 @@
 					<table width="98%" height="100%" border="0" valign="center" align="center" >
 						<tr>
 							<td width="100%" align="center">
-								<font color="#042e72" size="3"><b>Presentazione Aziendale</b></font></font>
+								<div id="titolov1" class="visione4"><font color="#042e72"><b>Soluzioni e Tecnologie a Supporto del Vostro Core Business</b></font></div>
 							</td>
 						</tr>
 						<tr>
 							<td width="100%" align="center">
+								<!--<div id="video"><div>-->
 								<a href="javascript:aprivideo1()"><img src="http://www.pokeranswer.it/img/video1.png" width="240px" data-rel="external"></a>
 							</td>
 						</tr>
@@ -1741,11 +1662,13 @@
 						</tr>
 						<tr>
 							<td width="100%" align="center">
-								<font color="#042e72" size="3"><b>BNI - Referall Marketing</b></font></font>
+								<div id="titolov2" class="visione4"><font color="#042e72"><b>BNI - Referall Marketing</b></font></font></div>
+								<div id="titolov2" class="visione4"><font color="#042e72"><b>IBA Sempre a Portata di Mano</b></font></div>
 							</td>
 						</tr>
 						<tr>
 							<td width="100%" align="center">
+								<!--<div id="video2"><div>-->
 								<a href="javascript:aprivideo2()"><img src="http://www.pokeranswer.it/img/video2.png" width="240px" data-rel="external"></a>
 							</td>
 						</tr>
@@ -1829,6 +1752,8 @@
 			<div class="spinner" id="spinner"></div>
 			<div id="wrapper4">
 				<div id="scroller">
+				<table id="spazioipad4" style="display: none;" height="80px"><tr><td></td></tr></table>
+				<table id="spaziodroid4" style="display: none;" height="30px"><tr><td></td></tr></table>
 					
 					<table width="100%" height="24px" border="0" valign="center" align="center" >
 						<tr>
@@ -1842,36 +1767,14 @@
 					<table width="98%" height="100%" border="1" valign="center" align="center" class="div8">
 						<div id="contenuto"></div>
 
-						<!--<tr>
-							<td width="80%" align="center">
-								<table width="100%" align="left" valign="center">
-									<tr>
-										<td width="95%">&nbsp;
-											
-										</td>
-										<td width="5%">
-											
-										</td>
-									</tr>
-									<tr>
-										<td width="100%" align="left" colspan="2" valign="center">
-											12/09/2015 - 31/10/2015
-										</td>
-									</tr>
-									<tr>
-										<td width="100%" colspan="2" valign="center">
-											Titolo della notifica
-										</td>
-										
-									</tr>
-								</table>
-							</td>
-							<td width="20%" align="center" valign="center">
-								<img src="img/notRead.png" width="42px">
+					</table>
+
+                    <table width="100%" height="52px" border="0" valign="center" align="center" >
+						<tr>
+							<td width="100%" align="center">
+								
 							</td>
 						</tr>
-						<tr><td colspan="2"><hr></td></tr>-->
-						
 					</table>
 					
 				</div>
@@ -1932,6 +1835,10 @@
 				
 			</table>
 			
+			<div id="pluto5" align="center" valign="top" style="display: none;" >
+				
+			</div>
+			
 			<div id="pippo5" style="display: none;">
 				<table border="0" align="center" width="100%" height="260px">
 					<tr height="32px">
@@ -1946,7 +1853,7 @@
 					</tr>
 					<tr>
 						<td width="100%" align="center" valign="center">
-							<a href="javascript:mandasms()"><img src="img/sms.png" width="100px"></a>&nbsp;&nbsp;<a href="javascript:aprimail()"><img src="img/email.png" width="100px"></a>
+							<a href="javascript:mandasms5()"><img src="img/sms.png" width="100px"></a>&nbsp;&nbsp;<a href="javascript:aprimail5()"><img src="img/email.png" width="100px"></a>
 						</td>
 					</tr>
 				</table>
@@ -1956,6 +1863,8 @@
 			<div class="spinner" id="spinner"></div>
 			<div id="wrapper5">
 				<div id="scroller">
+				<table id="spazioipad5" style="display: none;" height="80px"><tr><td></td></tr></table>
+				<table id="spaziodroid5" style="display: none;" height="30px"><tr><td></td></tr></table>
 					
 					<table width="100%" height="24px" border="0" valign="center" align="center" >
 						<tr>
@@ -1994,7 +1903,7 @@
 			<table width="100%" border="0" align="center" valign="center" class="div55">
 				<tr>
 					<td algn="center" width="20%">
-						<a id="quartos" href="#"><div width='50px' class="pulsanteback"></div></a>
+						<a id="quartos" href="#"><div width='50px' class="pulsanteback2"></div></a>
 					</td>
 					<td algn="center" width="20%">
 						
@@ -2027,7 +1936,8 @@
 			<div class="spinner" id="spinner"></div>
 			<div id="wrapper6">
 				<div id="scroller">
-					
+				<table id="spazioipad6" style="display: none;" height="80px"><tr><td></td></tr></table>
+				<table id="spaziodroid6" style="display: none;" height="30px"><tr><td></td></tr></table>
 					
 					<table width="98%" height="100%" border="0" valign="center" align="center" >
 						<tr>
@@ -2037,8 +1947,8 @@
 						</tr>
 						<tr>
 							<td width="100%" align="center" colspan="2">
-								<font color="#042e72" size="4"><b>Send My App</b></font
-							></td>
+								<div id="sendapp" class="visione3"><b>Send My App</b></div>
+							</td>
 						</tr>
 						<tr>
 							<td width="100%" colspan="2">&nbsp;
@@ -2047,12 +1957,12 @@
 						</tr>
 						<tr>
 							<td width="100%" align="center" colspan="2">
-								<font color="#000" size="2">scegli come inviare la tua</font>
+								<div id="scegli" class="visione">scegli come inviare la tua</font>
 							</td>
 						</tr>
 						<tr>
 							<td width="100%" align="center" colspan="2">
-								<font color="#042e72" size="5"><b>Digital Business Card</b></font>
+								<div id="digital" class="visione3"><b>Digital Business Card</b></div>
 							</td>
 						</tr>
 						<tr>
@@ -2141,19 +2051,21 @@
 			<div class="spinner" id="spinner"></div>
 			<div id="wrapper7">
 				<div id="scroller">
+				<table id="spazioipad7" style="display: none;" height="80px"><tr><td></td></tr></table>
+				<table id="spaziodroid7" style="display: none;" height="30px"><tr><td></td></tr></table>
 					
 					<table width="90%" height="100%" border="0" valign="center" align="center" >
 						<tr>
 							<td width="100%">
-								<div id="testoTitolo" class="visione2"><b>Soluzioni e Tecnologie per il vostro business</b><br><br></div>
+								<div id="testoTitolo3" class="visione2DROID"><b>Soluzioni e Tecnologie per il vostro business</b><br><br></div>
 							</td>
 						</tr>
 						<tr>
 							<td width="90%" align="justify" colspan="2">
-								<div id="testo" class="visione">L’ultimo progetto di sviluppo di Ermes Italia riguarda il settore Mobile, strumento strategico per comunicare non solo tramite la voce ma soprattutto attraverso App-licazioni che ci permettono  di essere i primi a Promuovere, Pubblicare, Diffondere, Comunicare la Vostra Immagine il vostro Brand la vostra offerta di prodotti/servizi.<br><br>
+								<div id="testo3" class="visione">L’ultimo progetto di sviluppo di Ermes Italia riguarda il settore Mobile, strumento strategico per comunicare non solo tramite la voce ma soprattutto attraverso App-licazioni che ci permettono  di essere i primi a Promuovere, Pubblicare, Diffondere, Comunicare la Vostra Immagine il vostro Brand la vostra offerta di prodotti/servizi.<br><br>
 										Tale progetto si chiama IBA – Interactive Business App – un sistema innovativo di personalizzazione del profilo di qualsiasi attività, professione o azienda.<br><br> E’ indicato per piccole, medie e grandi imprese, per artigiani e professionisti, attività commerciali, settore sportivo e ricreativo, ristorazione e alberghi è per tutti coloro che vogliono e cercano un modo nuovo di comunicare rispetto ad altri, per uscire dal mucchio ed essere presenti sul display più consultato al mondo, quello dello Smartphone e Tablet.<br><br>
 										
-										Ermes Italia si occupa anche di Business Intelligence a supporto della Governance Integrata.<br><br> L’offerta si compone di una serie di attività di Consulenza Direzionale in ambito Process & Management ICT, Planning & Control, Audit & Compliance. Le soluzioni che proponiamo vanno dalla progettazione e realizzazione di modelli di sviluppo aziendali alle strategie di semplificazione per il miglioramento delle performance in ottica di protezione delle risorse, risparmio e riduzione dei costi, senza penalizzare e compromettere la qualità dell’ambiente,  della sicurezza sul lavoro e dei risultati attesi.&nbsp;</div>
+										Ermes Italia si occupa anche di Business Intelligence a supporto della Governance Integrata.<br><br> L’offerta si compone di una serie di attività di Consulenza Direzionale in ambito Process & Management ICT, Planning & Control, Audit & Compliance. Le soluzioni che proponiamo vanno dalla progettazione e realizzazione di modelli di sviluppo aziendali alle strategie di semplificazione per il miglioramento delle performance in ottica di protezione delle risorse, risparmio e riduzione dei costi, senza penalizzare e compromettere la qualità dell’ambiente,  della sicurezza sul lavoro e dei risultati attesi.&nbsp;<br><br></div>
 				
 				</td>
 				</tr>
@@ -2162,18 +2074,16 @@
 						<font ><font color="blue">&nbsp;</font></font>
 					</td>
 				</tr>
-				<tr>
-					<td width="100%" colspan="2" align="center">
-						<font ><font color="blue">&nbsp;</font></font>
-					</td>
-				</tr>
-				<tr>
-					<td width="100%" colspan="2" align="center">
-						<font ><font color="blue">&nbsp;</font></font>
-					</td>
-				</tr>
 			
 				</table>
+
+                    <table width="100%" height="24px" border="0" valign="center" align="center" >
+						<tr>
+							<td width="100%" align="center">
+								
+							</td>
+						</tr>
+					</table>
 
 
 				</div>
@@ -2237,6 +2147,8 @@
 	<div class="spinner" id="spinner"></div>
 	<div id="wrapper8">
 		<div id="scroller">
+				<table id="spazioipad8" style="display: none;" height="80px"><tr><td></td></tr></table>
+				<table id="spaziodroid8" style="display: none;" height="30px"><tr><td></td></tr></table>
 			
 			<table width="100%" height="24px" border="0" valign="center" align="center" >
 				<tr>
@@ -2286,131 +2198,126 @@
 			 </table>
 			 <br><br>
 			 
-			 <!--<table id="contatto" width="98%" height="100%" border="0" valign="center" align="center" class="div56">
-			 
-			 <tr>
-			 <td width="100%" colspan="2" align="center" >&nbsp;
-			 <font color="#FFF" size="3"><b>My Contact</b></font>
-			 </td>
-			 </tr>
-			 
-			 </table>-->
-			 
 			 <br>
 			 <table id="contatto" width="90%" height="100%" border="0" valign="center" align="center">
-			 <tr>
-			 <td width="100%" colspan="2" align="left">
-			 <img src="img/Dindirizzo.png" height="25%"><font color="#7e7e7e" size="2"><b>Address</b></font>
-			 </td>
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2" align="left">
-			 <a href="javascript:aprimappa()" class="visione"><font color="#042e72" size="3"><b>Via Zoe Fontana, 220 Roma</b></font></a>
-			 </td>
-			 
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2" align="left">
-			 <a href="javascript:aprimappa()" class="visione"><img src="img/Piantina.png" width="300px"></a>
-			 </td>
-			 
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2">&nbsp;
-			 
-			 </td>
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2" align="left">
-			 <img src="img/Dtel.png" height="25%"><font color="#7e7e7e" size="2"><b>Phone</b></font>
-			 </td>
-			 
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2" align="left">
-			 <a href="tel:+39064153215" class="visione"><font color="#042e72" size="3">+39 06 41531215</font></a>
-			 
-			 </td>
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2">&nbsp;
-			 
-			 </td>
-			 
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2" align="left">
-			 <img src="img/Dcell.png" height="25%"><font color="#7e7e7e" size="2"><b>Mobile</b></font>
-			 </td>
-			 
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2" align="left">
-			 <a href="tel:+393357540725" class="visione"><font color="#042e72" size="3">+39 335 7540725</font></a>
-			 </td>
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2">&nbsp;
-			 
-			 </td>
-			 
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2" align="left">
-			 <img src="img/Demail.png" height="25%"><font color="#7e7e7e" size="2"><b>e-mail</b></font>
-			 </td>
-			 
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2" align="left">
-			 <a href="javascript:aprimail()"><font color="#042e72" size="3">d.putignano@ermesitalia.it</font></a>
-			 </td>
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2">&nbsp;
-			 
-			 </td>
-			 
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2" align="left">
-			 <img src="img/Dinternet1.png" height="25%"><font color="#7e7e7e" size="2"><b>Web</b></font>
-			 </td>
-			 
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2" align="left">
-			 <font color="#042e72" size="3"><b>www.ermesitalia.it</b></font>
-			 </td>
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2">&nbsp;
-			 
-			 </td>
-			 
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2">&nbsp;
-			 
-			 </td>
-			 
-			 </tr>
-			 
-			 
-			 <tr>
-			 <td width="100%" colspan="2">&nbsp;
-			 
-			 </td>
-			 
-			 </tr>
-			 <tr>
-			 <td width="100%" colspan="2">&nbsp;
-			 
-			 </td>
-			 
-			 </tr>
-			</table>
+				 <tr>
+					 <td width="10%" align="left" align="center">
+						 <img src="img/Dindirizzo.png" height="25%">
+							 </td>
+					 <td width="90%" align="left" valign="bottom">
+						 <div id="indirizzotext" class="visione2"><font color="#7e7e7e"><b>Address</b></font></div>
+					 </td>
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2" align="left">
+						 <a href="javascript:aprimappa()" class="visione2"><div id="indirizzoV" class="visione"><b>Via Zoe Fontana, 220 Roma</b></div></a>
+					 </td>
+					 
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2" align="left">
+						 <a href="javascript:aprimappa()" class="visione2"><img src="img/Piantina.png" width="90%"></a>
+					 </td>
+					 
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2"><br>&nbsp;<br>
+						 
+					 </td>
+				 </tr>
+				 <tr>
+					 <td width="10%" align="left" align="center">
+						 <img src="img/Dtel.png" height="25%">
+							 </td>
+					 <td width="90%" align="left" valign="bottom">
+				   <div id="phonetext" class="visione2"><font color="#7e7e7e"><b>Phone</b></font></div>
+					 </td>
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2" align="left">
+						 <a href="tel:+39064153215" class="visione2"><div id="phoneV" class="visione">+39 06 41531215</div></a>
+						 
+					 </td>
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2"><br>&nbsp;<br>
+						 
+					 </td>
+					 
+				 </tr>
+				 <tr>
+					 <td width="10%" align="left" align="center">
+						 <img src="img/Dcell.png" height="25%">
+							 </td>
+					 <td width="90%" align="left" valign="bottom">
+						 <div id="mobiletext" class="visione2"><font color="#7e7e7e"><b>Mobile</b></font></div>
+					 </td>
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2" align="left">
+						 <a href="tel:+393357540725" class="visione2"><div id="mobileV" class="visione">+39 335 7540725</div></a>
+					 </td>
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2"><br>&nbsp;<br>
+						 
+					 </td>
+					 
+				 </tr>
+				 <tr>
+					 <td width="10%" align="left" align="center">
+						 <img src="img/Demail.png" height="25%">
+							 </td>
+					 <td width="90%" align="left" valign="bottom">
+						 <div id="emailtext" class="visione2"><font color="#7e7e7e"><b>e-mail</b></font></div>
+					 </td>
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2" align="left">
+						 <a href="javascript:aprimail()"><div id="emailV" class="visione2">d.putignano@ermesitalia.it</div></a>
+					 </td>
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2"><br>&nbsp;<br>
+						 
+					 </td>
+					 
+				 </tr>
+				 <tr>
+					 <td width="10%" align="left" align="center">
+						 <img src="img/Dinternet1.png" height="25%">
+							 </td>
+					 <td width="90%" align="left" valign="bottom">
+						 <div id="webtext" class="visione2"><font color="#7e7e7e"><b>Web</b></font></div>
+					 </td>
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2" align="left">
+						 <a href="javascript:apriweb()"><div id="webV" class="visione2"><b>www.ermesitalia.it</b></div></a>	
+					 </td>
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2"><br>&nbsp;<br>
+						 
+					 </td>
+					 
+				 </tr>
+				 <tr>
+					 <td width="100%" colspan="2">&nbsp;
+						 
+					 </td>
+					 
+				 </tr>
+				 
+			 </table>
 
+            <table width="100%" height="24px" border="0" valign="center" align="center" >
+						<tr>
+							<td width="100%" align="center">
+								
+							</td>
+						</tr>
+			</table>
 		</div>
 		
 	</div>
@@ -2458,15 +2365,12 @@
 	
 </div>
 
-
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		
 		<script type="text/javascript">
 			app.initialize();
 			</script>
-		
-
 
 	</body>
 </html>
