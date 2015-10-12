@@ -29,8 +29,6 @@ var app = {
 			PushbotsPlugin.initializeAndroid("55eef2521779597d478b456a", "316671979548");
 		}
 		
-		PushbotsPlugin.resetBadge();
-		
 		//var isPhone = screen.height < 800 || screen.width < 800;
 		
 		var isMobileScreenWidth = (screen.width / window.devicePixelRatio)
@@ -685,10 +683,10 @@ function regToken() {
 	$(".spinner").show();
 	$.ajax({
 		   type:"GET",
-		   url:"http://interactivebusinessapp.it/device/set_token/PxgLiaL7dBgTYUzUyHZRNGIUlT5NIabyHrkZC57PHoJGiiAQZA/iiyWJvGB2pvCv4jKCAsTIWIWzhmllX1DwXn1y3CAt8dYcwIP7/"+ localStorage.getItem("Token") +"",
+		   url:"http://interactivebusinessapp.it/device/set_token/PxgLiaL7dBgTYUzUyHZRNGIUlT5NIabyHrkZC57PHoJGiiAQZA/iiyWJvAGB2pvCv4jKCAsTlWlWzhmIlX1DwXn1y3CAt8dYcwIP7/"+ localStorage.getItem("Token") +"",
 		   //url:"http://interactivebusinessapp.it/device/set_token/{platform_code}/{company_code}/{device_token}",
 		   //Android PxgLiaL7dBgTYUzUyHZRNGIUlT5NIabyHrkZC57PHoJGiiAQZA
-		   //data: {token:localStorage.getItem("Token")},
+		   //data: {token:localStorage.getItem("Token")}, iiyWJvAGB2pvCv4jKCAsTlWlWzhmIlX1DwXn1y3CAt8dYcwIP7
 		   contentType: "application/json; charset=utf-8",
 		   json: 'callback',
 		   timeout: 7000,
@@ -700,6 +698,7 @@ function regToken() {
 		   },
 		   error: function(){
 		   $(".spinner").hide();
+		   
 		   checkpush()
 		   
 		   navigator.notification.alert(
