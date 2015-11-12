@@ -802,7 +802,7 @@ function apriweb () {
 function aprimail () {
 
 window.plugin.email.open({
-	to:      'd.putignano@ermesitalia.it',
+	to:      '',
 	subject: 'Contatto',
 	body:    "La Digital Bisiness Card IBA di 'Domenico Putignano' e' disponibile al link http://www.interactivebusinessapp.it/download/d_putignano",
 	isHtml:  true
@@ -814,7 +814,7 @@ window.plugin.email.open({
 function aprimail5 () {
 
 window.plugin.email.open({
-	to:      ""+ localStorage.getItem("contactemail") +"",
+	to:      ""+ localStorage.getItem("emailcontact") +"",
 	subject: "",
 	body:    "A,"+ localStorage.getItem("contact") +"",
 	isHtml:  true
@@ -843,8 +843,7 @@ function mandasms5 () {
 
 function mandasms () {
 	
-
-	window.plugins.socialsharing.shareViaSMS("La Digital Bisiness Card IBA di 'Domenico Putignano' e' disponibile al link http://www.interactivebusinessapp.it/download/d_putignano", "+393357540725", function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})
+	window.plugins.socialsharing.shareViaSMS("La Digital Bisiness Card IBA di 'Domenico Putignano' e' disponibile al link http://www.interactivebusinessapp.it/download/d_putignano", "", function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})
 }
 
 
